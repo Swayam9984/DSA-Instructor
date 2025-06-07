@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Tutor - Advanced AI Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- This wrapper is now controlled by the radio buttons for theming -->
+    <div class="theme-wrapper">
+        <!-- THEME RADIO BUTTONS (HIDDEN) -->
+        <input type="radio" id="theme-dark" name="theme-select" class="theme-select-radio" checked>
+        <input type="radio" id="theme-light" name="theme-select" class="theme-select-radio">
+        <input type="radio" id="theme-synthwave" name="theme-select" class="theme-select-radio">
+        <input type="radio" id="theme-matrix" name="theme-select" class="theme-select-radio">
+
+        <!-- Animated Background -->
+        <div id="particles-js"></div>
+
+        <div class="app-layout">
+            <!-- LEFT SIDEBAR -->
+            <aside class="sidebar left-sidebar">
+                <div class="sidebar-header">
+                    <i class="ph-bold ph-brain"></i>
+                    <h2>DSA Tutor</h2>
+                </div>
+                <div class="creator-credit">
+                    <p>Created by <strong>Swayam Patwa</strong></p>
+                </div>
+                <nav class="sidebar-nav">
+                    <h3><i class="ph-bold ph-book-open"></i> How to Use</h3>
+                    <ul>
+                        <li>Ask for explanations of any data structure.</li>
+                        <li>Request code for an algorithm in a specific language.</li>
+                        <li>Ask for Big O analysis.</li>
+                    </ul>
+                </nav>
+                <div class="sidebar-footer">
+                    <!-- NEW THEME MENU -->
+                    <div class="theme-menu">
+                        <div class="theme-menu-label">
+                            <i class="ph-bold ph-paint-brush"></i>
+                            <span>Select Theme</span>
+                        </div>
+                        <div class="theme-options">
+                            <label for="theme-dark" class="theme-option" style="--theme-color: #00e5ff;"><span>Abyss Dark</span></label>
+                            <label for="theme-light" class="theme-option" style="--theme-color: #007bff;"><span>Arctic Light</span></label>
+                            <label for="theme-synthwave" class="theme-option" style="--theme-color: #ff00c1;"><span>Synthwave</span></label>
+                            <label for="theme-matrix" class="theme-option" style="--theme-color: #00ff41;"><span>Matrix</span></label>
+                        </div>
+                    </div>
+                    <p class="version-text">v1.7.0-flash</p>
+                </div>
+            </aside>
+
+            <!-- MAIN CHAT CONTENT -->
+            <main class="main-content">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h1>Algorithm & Data Structure Chat</h1>
+                        <div class="status"> <span class="status-indicator"></span> Online </div>
+                    </div>
+                    <div class="chat-window" id="chat-window">
+                        <div class="message ai-message">
+                            <div class="message-content">
+                                <p>Greetings. I am your DSA Tutor. Present your query on Data Structures or Algorithms, and I shall provide a clear, concise solution.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="chat-input-form" id="chat-form">
+                        <div class="input-wrapper">
+                            <input type="text" id="user-input" placeholder="Ask about an algorithm..." autocomplete="off">
+                        </div>
+                        <button type="submit" id="send-btn">
+                            <i class="ph-bold ph-paper-plane-tilt"></i>
+                        </button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="DSA.js"></script>
+</body>
+</html>
